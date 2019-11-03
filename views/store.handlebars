@@ -1,0 +1,69 @@
+
+<div class="containerg">
+    <div class="containerg__lateral">
+        <p class="containerg__title">Alien`s Skills</p> 
+          <div class="containerg__skills">
+           <a href= "" class="containerg__sub">Cook</a>
+           <a href= "" class="containerg__sub">Babysister</a>
+           <a href= "" class="containerg__sub">Clean</a>
+    </div>
+
+    <div>
+        <p class="containerg__title">Order</p>
+          <a href= "" class="containerg__sub">Price</a>
+            <form action="/nuevaColeccion" method="GET">
+               <select name="order">
+                  <option value="circular">From less to more</option>
+                  <option value="cuadrado">From more to less</option>
+               </select>
+               <button class="filters__enviar" type="submit">Ordenar</button>
+            </form>
+
+          <a href= "" class="containerg__sub">Weight</a>
+            <form action="/nuevaColeccion" method="GET">
+               <select name="order">
+                  <option value="circular">From less to more</option>
+                  <option value="cuadrado">From more to less</option>
+               </select>
+               <button class="filters__enviar" type="submit">Ordenar</button>
+            </form>
+
+            <a href= "" class="containerg__sub">Size</a>
+            <form action="/nuevaColeccion" method="GET">
+               <select name="order">
+                  <option value="circular">From less to more</option>
+                  <option value="cuadrado">From more to less</option>
+               </select>
+               <button class="filters__enviar" type="submit">Ordenar</button>
+            </form>
+    </div>
+
+           
+           
+
+    </div>
+
+
+     <div class="productscontainer">
+    {{#each products}}
+        <div class="productscards">
+           <a href="" class="productnext"> <img class="productscards__imgs" src="{{images}}" alt=""> </a>
+                 <div class="productsd">
+                    <p class="productsd__sub">{{skill}}</p>
+                    <p class="productsd__name">{{name}}</p>
+                    <p class="productsd__price">{{price}} US</p>
+                    <p class="productsd__sub">{{size}} Cm</p>
+                    <p class="productsd__sub">{{weight}} Kg</p>
+                      
+                 </div>
+        </div>
+    {{/each}}
+    </div> 
+
+
+</div>
+
+
+
+
+   
