@@ -23,7 +23,7 @@
     font-weight: bold;
     font-size: 18pt;
     margin-left: 3%;
-    margin-top: 5%;
+    margin-top: 20%;
 }
 
 .containerg__skills {
@@ -41,10 +41,19 @@
     color: gray;
     line-height: 30pt;
     margin-left: 3%;
+    &:hover {
+        color: black;
+        font-size: 16pt;
+    }
 }
 
-.containerg__sub:hover {
-    color: black;
+.containerg__order {
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    text-decoration: none;
+    color: gray;
+    line-height: 30pt;
+    margin-left: 3%;
 }
 
 .productscontainer {
@@ -61,6 +70,7 @@
     justify-content: flex-start;
     align-content: stretch;
     align-items: flex-start;
+    margin-bottom: 6%;
 }
 
 .productsd {
@@ -69,6 +79,15 @@
     font-size: 12pt;
     margin-left: 5%;
     line-height: 3pt;
+}
+
+.productsd__buy {
+    color: #fda7cf;
+    text-decoration: none;
+    &:hover {
+        color: #ff3091;
+        font-size: 14pt;
+    }
 }
 
 .productsd__name {

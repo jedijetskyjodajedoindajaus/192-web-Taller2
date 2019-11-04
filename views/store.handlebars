@@ -1,45 +1,55 @@
 
 <div class="containerg">
     <div class="containerg__lateral">
-        <p class="containerg__title">Alien`s Skills</p> 
-          <div class="containerg__skills">
-           <a href= "" class="containerg__sub">Cook</a>
-           <a href= "" class="containerg__sub">Babysister</a>
-           <a href= "" class="containerg__sub">Clean</a>
-    </div>
+        
+          {{!-- <div class="containerg__skills" action="/tienda" method="GET">
+             <a href= "" name="filter" class="containerg__sub" value="cook">Cook</a>
+             <a href= "" class="containerg__sub">Babysitter</a>
+             <a href= "" class="containerg__sub">Clean</a>
+             <button class="filters__enviar" type="submit">Ordenar</button>
+          
+           </div> --}}
 
     <div>
+        <p class="containerg__title">Filter</p> 
+          <a href= "" class="containerg__order">Alien's skills</a>
+            <form action="/tienda" method="GET">
+               <select name="filter">
+                  <option value="cook">Cook</option>
+                  <option value="babysitter">Babysitter</option>
+                  <option value="clean">Clean</option>
+               </select>
+               <button class="filters__enviar" type="submit">Filter</button>
+            </form>
+
         <p class="containerg__title">Order</p>
-          <a href= "" class="containerg__sub">Price</a>
-            <form action="/nuevaColeccion" method="GET">
+          <a href= "" class="containerg__order">Price</a>
+            <form action="/tienda" method="GET">
                <select name="order">
-                  <option value="circular">From less to more</option>
-                  <option value="cuadrado">From more to less</option>
+                  <option value="cheap">From less to more</option>
+                  <option value="expensive">From more to less</option>
                </select>
                <button class="filters__enviar" type="submit">Ordenar</button>
             </form>
 
-          <a href= "" class="containerg__sub">Weight</a>
-            <form action="/nuevaColeccion" method="GET">
+          <a href= "" class="containerg__order">Weight</a>
+            <form action="/tienda" method="GET">
                <select name="order">
-                  <option value="circular">From less to more</option>
-                  <option value="cuadrado">From more to less</option>
+                  <option value="thin">From less to more</option>
+                  <option value="heavy">From more to less</option>
                </select>
                <button class="filters__enviar" type="submit">Ordenar</button>
             </form>
 
-            <a href= "" class="containerg__sub">Size</a>
-            <form action="/nuevaColeccion" method="GET">
+            <a href= "" class="containerg__order">Size</a>
+            <form action="/tienda" method="GET">
                <select name="order">
-                  <option value="circular">From less to more</option>
-                  <option value="cuadrado">From more to less</option>
+                  <option value="small">From less to more</option>
+                  <option value="tall">From more to less</option>
                </select>
                <button class="filters__enviar" type="submit">Ordenar</button>
             </form>
     </div>
-
-           
-           
 
     </div>
 
@@ -54,6 +64,7 @@
                     <p class="productsd__price">{{price}} US</p>
                     <p class="productsd__sub">{{size}} Cm</p>
                     <p class="productsd__sub">{{weight}} Kg</p>
+                    <a href="" class="productsd__buy" data-name="{{this._id}}">Add to chart</a>
                       
                  </div>
         </div>
