@@ -57,14 +57,14 @@
      <div class="productscontainer">
     {{#each products}}
         <div class="productscards">
-           <a href="" class="productnext"> <img class="productscards__imgs" src="{{images}}" alt=""> </a>
+           <a href="/product/{{this._id}}" class="productnext"> <img class="productscards__imgs" src="{{images}}" alt=""> </a>
                  <div class="productsd">
                     <p class="productsd__sub">{{skill}}</p>
                     <p class="productsd__name">{{name}}</p>
                     <p class="productsd__price">{{price}} US</p>
                     <p class="productsd__sub">{{size}} Cm</p>
                     <p class="productsd__sub">{{weight}} Kg</p>
-                    <a href="" class="productsd__buy" data-name="{{this._id}}">Add to chart</a>
+                    <a href="" class="productsd__buy" data-name="{{this._id}}">Add to cart</a>
                       
                  </div>
         </div>

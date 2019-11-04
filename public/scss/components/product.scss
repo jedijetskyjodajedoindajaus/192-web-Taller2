@@ -1,0 +1,40 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
+
+.product__info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    line-height: .5%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: 0;
+    margin: 0;
+    margin-right: 80%;
+}
+
+.product__skill {
+    font-size: 12pt;
+    color: gray;
+}
+
+.product__title {
+    color: black;
+    font-size: 18pt;
+}
+
+.product__price {
+    font-size: 14pt;
+}
+
+.product__img {
+    width: 80%;
+}

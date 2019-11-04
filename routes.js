@@ -74,9 +74,7 @@ function createRoutes(app, db) {
                         result[c].cartLength = cartList.length,
                             res.render('product', result[c]);
                     }
-
                 }
-
 
             });
 
