@@ -146,8 +146,18 @@ html {
 }
 
 .shoppingchart__nav {
+    display: flex;
+    flex-direction: row;
     margin-right: 10%;
-    margin-top: 30px;
+    margin-top: 3%;
+}
+
+.shopping__counter {
+    font-family: Roboto Slab;
+    font-weight: bold;
+    font-size: 14pt;
+    margin-left: 50%;
+    margin-top: 5%;
 }
 
 .btnFont {

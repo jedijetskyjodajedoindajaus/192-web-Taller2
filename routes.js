@@ -23,7 +23,7 @@ function createRoutes(app, db) {
         products.find({})
             // transformamos el cursor a un arreglo
             .toArray((err, result) => {
-                // asegurarnos de que noh ay error
+                // asegurarnos de que no hay error
 
                 //
 
@@ -57,6 +57,31 @@ function createRoutes(app, db) {
 
 
     });
+
+    //BUSCO UN PRODUCTO EN BASE A SU ID EN LA BASE DE DATOS Y CARGO EL HANDLEBARS CON SU INFORMACION 
+    app.get('/product/:id', function(req, res) {
+        const products = db.collection('products');
+        var query = {};
+        products.find({})
+            // transformamos el cursor a un arreglo
+            .toArray((err, result) => {
+                // asegurarnos de que noh ay error
+
+                //
+                var c = 0;
+                for (c; c < result.length; c++) {
+                    if (req.params.id.toString() === result[c]._id.toString()) {
+                        result[c].cartLength = cartList.length,
+                            res.render('product', result[c]);
+                    }
+
+                }
+
+
+            });
+
+    });
+
     app.get('/tienda', (request, response) => {
         const products = db.collection('products');
         console.log('Alguien entró a la tienda');
@@ -71,7 +96,7 @@ function createRoutes(app, db) {
 
                 if (request.query.filter == 'cook') {
                     listCopy = listCopy.filter(function(elem) {
-                        if (elem.skill === "Cook") {
+                        if (elem.skill == "Cook") {
                             return true;
                         } else {
                             return false;
@@ -81,7 +106,7 @@ function createRoutes(app, db) {
 
                 if (request.query.filter == 'babysitter') {
                     listCopy = listCopy.filter(function(elem) {
-                        if (elem.skill === "Babysitter") {
+                        if (elem.skill == "Babysitter") {
                             return true;
                         } else {
                             return false;
@@ -91,7 +116,7 @@ function createRoutes(app, db) {
 
                 if (request.query.filter == 'clean') {
                     listCopy = listCopy.filter(function(elem) {
-                        if (elem.skill === "Clean") {
+                        if (elem.skill == "Clean") {
                             return true;
                         } else {
                             return false;

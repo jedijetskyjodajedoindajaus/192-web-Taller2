@@ -1,13 +1,14 @@
 window.addEventListener('load', function() {
 
-    var btnsAdd = document.querySelectorAll('.productsd__buy');
-    var cartCount = document.querySelector('.cart__count');
+    var addChart__btn = document.querySelectorAll('.productsd__buy');
+    var shopping__counter = document.querySelector('.shopping__counter');
 
-    btnsAdd.forEach(function(btn) {
+    addChart__btn.forEach(function(btn) {
 
         btn.addEventListener('click', function(event) {
             event.preventDefault();
             var id = btn.getAttribute('data-name');
+            console.log("helow madafaka")
 
             var promise = fetch('/api/cart/' + id, { method: 'POST' });
             promise
@@ -17,7 +18,7 @@ window.addEventListener('load', function() {
                 })
                 .then(function(data) {
                     console.log(data);
-                    cartCount.innerText = data.cartLength;
+                    shopping__counter.innerText = data.cartLength;
                 });
 
         });

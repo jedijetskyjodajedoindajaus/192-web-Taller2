@@ -166,8 +166,22 @@ html {
   width: 100%; }
 
 .shoppingchart__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
   margin-right: 10%;
-  margin-top: 30px; }
+  margin-top: 3%; }
+
+.shopping__counter {
+  font-family: Roboto Slab;
+  font-weight: bold;
+  font-size: 14pt;
+  margin-left: 50%;
+  margin-top: 5%; }
 
 .btnFont {
   font-family: Roboto Slab;
@@ -1127,3 +1141,9 @@ input[type=range]:focus::-ms-fill-upper {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1); }
+
+.orderbtn {
+  border-radius: 4em;
+  border: none;
+  background-color: #ff3091;
+  color: blanchedalmond; }
