@@ -1,21 +1,28 @@
 <div class="product">
     <div class="product__box">
-         <img class="product__img" src={{images}} alt="">    
+           <img class="product__img" src={{images}} alt="">
+          
     </div>
-    <div class= "product__info">
+
+       <div class= "product__info">
+           <div class="product__text">
              <p class="product__skill">{{skill}}</p>
              <p class="product__title">{{name}}</p>
              <p class="product__price">{{price}} US</p>
+           </div>
+
+       <div class="btn__p">
+        {{!--<a><button class="w3-button w3-border w3-hover-black">Add to cart</button></a>--}}
+        <input type="button" class="product__addcart"  data-name="{{this._id}}" value="Add to cart">
+           
 
          </div>
-
-        <input type="button" class="product__addcart" value="Add to cart">
-    
-
-
-
-
-
+         
+        
+        
+   
 
 
 </div>
+
+<script src="/scripts/product.js"></script>
