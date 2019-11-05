@@ -882,4 +882,22 @@ input[type=range]:focus::-ms-fill-upper {
         box-shadow: none;
         font-size: 16pt;
     }
+    .headerstore {
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+    }
+    .headerstore__nav {
+        flex-direction: row;
+        margin-left: 10%;
+        font-size: 12pt;
+    }
+    .headerstore__logo {
+        margin-left: 5%;
+        width: 20%;
+    }
+    .navstore__item {
+        font-size: 10pt;
+        padding: 0.3em;
+    }
 }

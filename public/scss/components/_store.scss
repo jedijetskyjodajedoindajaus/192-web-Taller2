@@ -1,116 +1,175 @@
-.containerg {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: stretch;
-    align-items: flex-start;
-    margin-top: 8%;
-}
-
-.lateral__container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-}
-
-.containerg__title {
-    color: black;
-    font-family: "Roboto Slab";
-    font-weight: bold;
-    font-size: 18pt;
-    margin-left: 3%;
-    margin-top: 20%;
-}
-
-.containerg__skills {
-    display: flex;
-    flex-direction: column;
-    font-family: "Roboto Slab";
-    font-weight: bold;
-    font-size: 14pt;
-}
-
-.containerg__sub {
-    font-family: "Roboto Slab";
-    font-weight: bold;
-    text-decoration: none;
-    color: gray;
-    line-height: 30pt;
-    margin-left: 3%;
-    &:hover {
-        color: black;
-        font-size: 16pt;
+    .containerg {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: stretch;
+        align-items: flex-start;
+        margin-top: 8%;
     }
-}
-
-.containerg__order {
-    font-family: "Roboto Slab";
-    font-weight: bold;
-    text-decoration: none;
-    color: gray;
-    line-height: 30pt;
-    margin-left: 3%;
-}
-
-.productscontainer {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: flex-end;
-    width: 80%;
-}
-
-.productscards {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: stretch;
-    align-items: flex-start;
-    margin-bottom: 6%;
-}
-
-.productsd {
-    font-family: "Roboto Slab";
-    font-weight: bold;
-    font-size: 12pt;
-    margin-left: 5%;
-    line-height: 3pt;
-}
-
-.productsd__buy {
-    color: #fda7cf;
-    text-decoration: none;
-    &:hover {
-        color: #ff3091;
+    
+    .lateral__container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: flex-start;
+    }
+    
+    .containerg__title {
+        color: black;
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 18pt;
+        margin-left: 3%;
+        margin-top: 20%;
+    }
+    
+    .containerg__skills {
+        display: flex;
+        flex-direction: column;
+        font-family: "Roboto Slab";
+        font-weight: bold;
         font-size: 14pt;
     }
-}
-
-.productsd__name {
-    font-size: 14pt;
-}
-
-.productsd__sub {
-    color: gray;
-    font-size: 10pt;
-}
-
-.productscards__imgs {
-    width: 80%;
-}
-
-.productnext:hover {
-    opacity: 80;
-    transform: scale(1.1);
-}
-
-.orderbtn {
-    border-radius: 4em;
-    border: none;
-    background-color: #ff3091;
-    color: blanchedalmond;
-}
+    
+    .containerg__sub {
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        text-decoration: none;
+        color: gray;
+        line-height: 30pt;
+        margin-left: 3%;
+        &:hover {
+            color: black;
+            font-size: 16pt;
+        }
+    }
+    
+    .containerg__order {
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        text-decoration: none;
+        color: gray;
+        line-height: 30pt;
+        margin-left: 3%;
+    }
+    
+    .productscontainer {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: flex-end;
+        width: 80%;
+    }
+    
+    .productscards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+        margin-bottom: 6%;
+    }
+    
+    .productsd {
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 12pt;
+        margin-left: 5%;
+        line-height: 3pt;
+    }
+    
+    .productsd__buy {
+        color: #fda7cf;
+        text-decoration: none;
+        &:hover {
+            color: #ff3091;
+            font-size: 14pt;
+        }
+    }
+    
+    .productsd__name {
+        font-size: 14pt;
+    }
+    
+    .productsd__sub {
+        color: gray;
+        font-size: 10pt;
+    }
+    
+    .productscards__imgs {
+        width: 80%;
+    }
+    
+    .productnext:hover {
+        opacity: 80;
+        transform: scale(1.1);
+    }
+    
+    .orderbtn {
+        border-radius: 4em;
+        border: none;
+        background-color: #ff3091;
+        color: blanchedalmond;
+    }
+    
+    .orderbtn__filter {
+        border-radius: 4em;
+        border: none;
+        background-color: #ff3091;
+        color: blanchedalmond;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .containerg {
+            margin-top: 0;
+        }
+        .containerg__title {
+            font-size: 10pt;
+            margin-top: 10%;
+            margin-left: 20%;
+        }
+        .containerg__lateral {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            margin-top: 0%;
+            line-height: 1pt;
+            font-size: 8pt;
+        }
+        .containerg__order {
+            font-size: 8pt;
+            margin-left: 20%;
+        }
+        .orderbtn__filter {
+            width: 30%;
+            margin-left: 22%;
+        }
+        .pproductsd__sub {
+            font-size: 9pt;
+        }
+        .productsd__name {
+            font-size: 12pt;
+        }
+        .productsd__price {
+            font-size: 11pt;
+        }
+        .productsd__buy {
+            font-size: 10pt;
+            &:hover {
+                font-size: 10pt;
+            }
+        }
+        .productscontainer {
+            display: grid;
+            grid-template-columns: auto auto;
+            align-items: flex-end;
+            width: 90%;
+            margin-top: 5%;
+        }
+        .productscards__imgs {
+            width: 90%;
+        }
+    }
