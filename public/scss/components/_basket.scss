@@ -4,7 +4,7 @@
     justify-content: flex-end;
     margin-left: auto;
     width: 30%;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(245, 243, 243);
 }
 
 .basket__img {
@@ -50,15 +50,36 @@
     color: gray;
 }
 
-.quantity__btn {
+.basket__trash {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0.5em;
-    margin-top: 25%;
-    scroll-margin-left: 50%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: 5%;
 }
 
-.btn__menos {
-    margin-right: auto;
+.basketfooter {
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 14pt;
+    margin-top: 5%;
+}
+
+.basket__total {
+    margin-left: 10%;
+}
+
+.basket__checkoubtn {
+    background-color: gray;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 14pt;
+    padding: 1em;
+    width: 100%;
+    &:hover {
+        color: white;
+        background-color: black;
+    }
 }

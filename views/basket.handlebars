@@ -10,10 +10,10 @@
             <p class="basket__name">{{name}}</p>
             <p class="basket__price">{{price}} US</p>
         </div>
-            <div class="quantity__btn">
-                <a href="#" class="btn__menos"><img src="/images/menos.png" alt=""></a>
-                <p class="quantity__number">1{{cantidad}}</p>
-                <a href="#" class="btn__mas"><img src="/images/suma.png" alt=""></a>
+            <div class="basket__trash">
+                <a href="#" class="trash__btn"><img src="/images/trash.png" alt=""></a>
+                 {{!-- <p class="quantity__number">1{{cantidad}}</p>
+              <a href="#" class="btn__mas"><img src="/images/suma.png" alt=""></a>--}}
 
             </div>
     </div>
@@ -21,8 +21,8 @@
 
     <div class="basketfooter">
         <p class="basket__total">Total cost {{total}} US</p>
-        <a href="/checkout" class="buttons__buttonBuyNowF">
-            <p>COMPRAR AHORA</p>
+        <a href="/checkout"><input type="button" class="basket__checkoubtn"  value="CHECK OUT"></a>
+        
         </a>
     </div>
 
