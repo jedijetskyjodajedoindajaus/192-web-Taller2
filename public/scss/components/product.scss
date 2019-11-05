@@ -59,6 +59,9 @@
         justify-content: flex-start;
         margin-right: 4em;
     }
+    .--responsive {
+        display: none;
+    }
 }
 
 .product__description {
@@ -90,6 +93,10 @@
     .product__img {
         margin-left: 10%;
     }
+    .product__info {
+        margin-right: auto;
+        margin-left: 10%;
+    }
     .product__skill {
         font-size: 10pt;
     }
@@ -100,6 +107,35 @@
         font-size: 12pt;
     }
     .product__description {
-        margin-left: 7%;
+        margin-left: 10%;
+    }
+    .product__dn {
+        line-height: 20pt;
+        margin-top: 0;
+    }
+    .btn__p {
+        display: none;
+    }
+    .product {
+        margin-top: 10%;
+    }
+    .product__addcart--responsive {
+        padding: 1em 1em 1em 1em;
+        width: 40%;
+        background-color: rgb(216, 216, 216);
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 14pt;
+        margin-left: 0%;
+        scroll-margin-bottom: 20%;
+        &:hover {
+            background: black;
+            color: white;
+            transition: ease-in-out;
+        }
+        .product__text {
+            justify-content: flex-start;
+            margin-right: 4em;
+        }
     }
 }

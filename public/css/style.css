@@ -1306,6 +1306,8 @@ input[type=range]:focus::-ms-fill-upper {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-right: 4em; }
+  .product__addcart .--responsive {
+    display: none; }
 
 .product__description {
   display: -webkit-box;
@@ -1340,6 +1342,9 @@ input[type=range]:focus::-ms-fill-upper {
 @media screen and (max-width: 700px) {
   .product__img {
     margin-left: 10%; }
+  .product__info {
+    margin-right: auto;
+    margin-left: 10%; }
   .product__skill {
     font-size: 10pt; }
   .product__title {
@@ -1347,7 +1352,34 @@ input[type=range]:focus::-ms-fill-upper {
   .product__price {
     font-size: 12pt; }
   .product__description {
-    margin-left: 7%; } }
+    margin-left: 10%; }
+  .product__dn {
+    line-height: 20pt;
+    margin-top: 0; }
+  .btn__p {
+    display: none; }
+  .product {
+    margin-top: 10%; }
+  .product__addcart--responsive {
+    padding: 1em 1em 1em 1em;
+    width: 40%;
+    background-color: #d8d8d8;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 14pt;
+    margin-left: 0%;
+    scroll-margin-bottom: 20%; }
+    .product__addcart--responsive:hover {
+      background: black;
+      color: white;
+      -webkit-transition: ease-in-out;
+      -o-transition: ease-in-out;
+      transition: ease-in-out; }
+    .product__addcart--responsive .product__text {
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      margin-right: 4em; } }
 
 .basket__products {
   display: -webkit-box;
@@ -1445,3 +1477,8 @@ input[type=range]:focus::-ms-fill-upper {
   .basket__checkoubtn:hover {
     color: white;
     background-color: black; }
+
+@media screen and (max-width: 700px) {
+  .basket__products {
+    width: 100%;
+    margin-left: 0%; } }

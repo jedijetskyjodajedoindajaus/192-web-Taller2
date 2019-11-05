@@ -83,3 +83,10 @@
         background-color: black;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .basket__products {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
