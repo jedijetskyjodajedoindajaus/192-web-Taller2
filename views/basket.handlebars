@@ -1,0 +1,29 @@
+
+<div class="basket__products">
+    <p class="basket__title">Basket</p>
+
+    {{#each products}}
+    <div class="basket__buy">
+        <img class="basket__img" src={{images}} alt="">
+        <div class="basket__info">
+            <p class="basket__skill">{{skill}}</p>
+            <p class="basket__name">{{name}}</p>
+            <p class="basket__price">{{price}} US</p>
+        </div>
+            <div class="quantity__btn">
+                <a href="#" class="btn__menos"><img src="/images/menos.png" alt=""></a>
+                <p class="quantity__number">1{{cantidad}}</p>
+                <a href="#" class="btn__mas"><img src="/images/suma.png" alt=""></a>
+
+            </div>
+    </div>
+    {{/each}}
+
+    <div class="basketfooter">
+        <p class="basket__total">Total cost {{total}} US</p>
+        <a href="/checkout" class="buttons__buttonBuyNowF">
+            <p>COMPRAR AHORA</p>
+        </a>
+    </div>
+
+</div>

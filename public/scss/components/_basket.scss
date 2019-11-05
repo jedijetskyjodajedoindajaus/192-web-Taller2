@@ -1,0 +1,64 @@
+.basket__products {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 30%;
+    background-color: rgb(209, 209, 209);
+}
+
+.basket__img {
+    width: 40%;
+}
+
+.basket__title {
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 30pt;
+    margin-left: 10%;
+}
+
+.basket__buy {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.basket__info {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    line-height: 1pt;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.basket__name {
+    font-size: 10pt;
+    color: gray;
+}
+
+.basket__price {
+    font-size: 14pt;
+    line-height: 1pt;
+}
+
+.basket__skill {
+    font-size: 8pt;
+    color: gray;
+}
+
+.quantity__btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    margin-top: 25%;
+    scroll-margin-left: 50%;
+}
+
+.btn__menos {
+    margin-right: auto;
+}

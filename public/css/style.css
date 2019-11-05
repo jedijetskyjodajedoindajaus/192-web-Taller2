@@ -1228,3 +1228,112 @@ input[type=range]:focus::-ms-fill-upper {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-right: 4em; }
+
+.product__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Roboto Slab";
+  font-weight: lighter;
+  font-size: 12pt;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  text-align: left;
+  line-height: 2pt;
+  margin-right: auto;
+  margin-left: 27%; }
+
+.product__dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 14pt; }
+
+.product__dn {
+  width: 100%; }
+
+.basket__products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-left: auto;
+  width: 30%;
+  background-color: #d1d1d1; }
+
+.basket__img {
+  width: 40%; }
+
+.basket__title {
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 30pt;
+  margin-left: 10%; }
+
+.basket__buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-top: 5%; }
+
+.basket__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  line-height: 1pt;
+  margin-left: 5%;
+  margin-top: 5%; }
+
+.basket__name {
+  font-size: 10pt;
+  color: gray; }
+
+.basket__price {
+  font-size: 14pt;
+  line-height: 1pt; }
+
+.basket__skill {
+  font-size: 8pt;
+  color: gray; }
+
+.quantity__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  padding: 0.5em;
+  margin-top: 25%;
+  scroll-margin-left: 50%; }
+
+.btn__menos {
+  margin-right: auto; }

@@ -60,3 +60,28 @@
         margin-right: 4em;
     }
 }
+
+.product__description {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto Slab";
+    font-weight: lighter;
+    font-size: 12pt;
+    justify-content: flex-start;
+    text-align: left;
+    line-height: 2pt;
+    margin-right: auto;
+    margin-left: 27%;
+}
+
+.product__dt {
+    display: flex;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 14pt;
+    ;
+}
+
+.product__dn {
+    width: 100%;
+}

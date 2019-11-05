@@ -166,5 +166,40 @@ function createRoutes(app, db) {
                 response.render('store', context);
             });
     });
+
+    app.get('/basket', function(req, res) {
+
+
+        var listCopy = cartList.slice();
+        var price = 0;
+        var cantidad = 0;
+        for (var i = 0; i < listCopy.length; i++) {
+            price += listCopy[i].price;
+
+        }
+
+        for (var i = 0; i < listCopy.length; i++) {
+
+            console.log(listCopy[i]._id.toString());
+            if (listCopy[i + 1] != null) {
+                if (listCopy[i]._id.toString() === listCopy[i + 1]._id.toString()) {
+                    cantidad += 1;
+                    console.log(cantidad);
+                }
+            }
+        }
+
+        const context = {
+            products: listCopy,
+            total: price,
+            cant: cantidad,
+
+
+        }
+
+
+        res.render('basket', context);
+
+    });
 }
 module.exports = createRoutes;
