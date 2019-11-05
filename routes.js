@@ -1,7 +1,7 @@
 const assert = require('assert');
 const ObjectID = require('mongodb').ObjectID;
 
-var cartList = [];
+var myBasket = [];
 
 function createRoutes(app, db) {
 
@@ -32,7 +32,7 @@ function createRoutes(app, db) {
                 for (c; c < result.length; c++) {
                     if (request.params.id.toString() === result[c]._id.toString()) {
                         esId = true;
-                        cartList.push(result[c]);
+                        myBasket.push(result[c]);
 
                         cont += 1;
                     }
@@ -41,15 +41,15 @@ function createRoutes(app, db) {
                 if (!esId) {
                     response.send({
                         message: 'error',
-                        cartLength: cartList.length
+                        cartLength: myBasket.length
                     });
                     return;
                 }
 
 
-                console.log("cartList[0]");
+                console.log("myBasket[0]");
                 response.send({
-                    cartLength: cartList.length
+                    cartLength: myBasket.length
                 });
 
             });
@@ -71,7 +71,7 @@ function createRoutes(app, db) {
                 var c = 0;
                 for (c; c < result.length; c++) {
                     if (req.params.id.toString() === result[c]._id.toString()) {
-                        result[c].cartLength = cartList.length,
+                        result[c].cartLength = myBasket.length,
                             res.render('product', result[c]);
                     }
                 }
@@ -169,8 +169,7 @@ function createRoutes(app, db) {
 
     app.get('/basket', function(req, res) {
 
-
-        var listCopy = cartList.slice();
+        var listCopy = myBasket.slice();
         var price = 0;
         var cantidad = 0;
         for (var i = 0; i < listCopy.length; i++) {
@@ -201,5 +200,10 @@ function createRoutes(app, db) {
         res.render('basket', context);
 
     });
+
+
+
+
+
 }
 module.exports = createRoutes;

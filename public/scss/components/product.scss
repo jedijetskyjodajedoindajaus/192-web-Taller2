@@ -59,9 +59,10 @@
         justify-content: flex-start;
         margin-right: 4em;
     }
-    .--responsive {
-        display: none;
-    }
+}
+
+.product__addcart--responsive {
+    display: none;
 }
 
 .product__description {

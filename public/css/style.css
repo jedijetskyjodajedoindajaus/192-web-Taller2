@@ -1044,7 +1044,8 @@ input[type=range]:focus::-ms-fill-upper {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-top: 8%; }
+  margin-top: 8%;
+  background-color: #f5f3f3; }
 
 .lateral__container {
   display: -webkit-box;
@@ -1306,8 +1307,9 @@ input[type=range]:focus::-ms-fill-upper {
     -ms-flex-pack: start;
     justify-content: flex-start;
     margin-right: 4em; }
-  .product__addcart .--responsive {
-    display: none; }
+
+.product__addcart--responsive {
+  display: none; }
 
 .product__description {
   display: -webkit-box;
@@ -1393,7 +1395,7 @@ input[type=range]:focus::-ms-fill-upper {
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-left: auto;
-  width: 30%;
+  width: 100%;
   background-color: #f5f3f3; }
 
 .basket__img {
