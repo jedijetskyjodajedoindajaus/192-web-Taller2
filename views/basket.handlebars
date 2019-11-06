@@ -1,8 +1,8 @@
-
 <div class="basket__products">
     <p class="basket__title">Basket</p>
 
     {{#each products}}
+
     <div class="basket__buy">
         <img class="basket__img" src={{images}} alt="">
         <div class="basket__info">
@@ -10,21 +10,22 @@
             <p class="basket__name">{{name}}</p>
             <p class="basket__price">{{price}} US</p>
         </div>
-            <div class="basket__trash">
-                <p class="number">1{{count}}</p>
-                <a href="/basket" class="trash__btn" data-name ="{{this.name}}"><img src="/images/trash.png" alt="" method= "POST"></a>
-                 
-                 {{!-- <p class="quantity__number">1{{cantidad}}</p>
+        <div class="basket__trash">
+            <p class="number">{{count}}</p>
+            <a href="/basket" class="trash__btn" data-name="{{this.name}}"><img src="/images/trash.png" alt=""
+                    method="POST"></a>
+
+            {{!-- <p class="quantity__number">1{{cantidad}}</p>
               <a href="#" class="btn__mas"><img src="/images/suma.png" alt=""></a>--}}
 
-            </div>
+        </div>
     </div>
     {{/each}}
 
     <div class="basketfooter">
         <p class="basket__total">Total cost {{total}} US</p>
-        <a href="/checkout"><input type="button" class="basket__checkoubtn"  value="CHECK OUT"></a>
-        
+        <a href="/checkout"><input type="button" class="basket__checkoubtn" value="CHECK OUT"></a>
+
         </a>
     </div>
 

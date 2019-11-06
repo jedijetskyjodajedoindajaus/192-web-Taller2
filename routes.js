@@ -65,7 +65,7 @@ function createRoutes(app, db) {
                 }
 
 
-                console.log("myBasket[0]");
+
                 response.send({
                     cartLength: myBasket.length
                 });
@@ -198,16 +198,24 @@ function createRoutes(app, db) {
 
         //idenfica los elementos iguales
         var count = {};
+        var clean = [];
+
         listCopy.forEach(function(i) {
             i = i._id.toString();
             count[i] = (count[i] || 0) + 1;
         });
-        console.log(count);
+
+        //hace la iteración de los ids
+        Object.keys(count).forEach(key => {
+            var obj = listCopy.find(elem => elem._id.toString() === key);
+            obj.count = count[key];
+            clean.push(obj);
+        })
 
 
 
         const context = {
-            products: listCopy,
+            products: clean,
             total: price,
             cant: count,
 
