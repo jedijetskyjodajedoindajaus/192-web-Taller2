@@ -11,7 +11,9 @@
             <p class="basket__price">{{price}} US</p>
         </div>
             <div class="basket__trash">
-                <a href="/basket" class="trash__btn" ><img src="/images/trash.png" data-name ="{{this._id}}" alt="" method= "POST"></a>
+                <p class="number">1{{cantidad}}</p>
+                <a href="/basket" class="trash__btn" data-name ="{{this.name}}"><img src="/images/trash.png" alt="" method= "POST"></a>
+                 
                  {{!-- <p class="quantity__number">1{{cantidad}}</p>
               <a href="#" class="btn__mas"><img src="/images/suma.png" alt=""></a>--}}
 

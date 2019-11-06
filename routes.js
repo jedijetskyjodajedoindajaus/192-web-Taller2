@@ -14,6 +14,23 @@ function createRoutes(app, db) {
     //     console.log('Alguien entró a la tienda');
     //     response.render('store');
     // });
+    app.post('/api/basket/delete', (request, response) => {
+        var id = request.body.id;
+
+        for (let index = 0; index < myBasket.length; index++) {
+            const element = myBasket[index];
+
+            if (element.name === id) {
+                console.log(myBasket, 'eudweudiweudiuwedwed');
+                myBasket.indexOf(index);
+                myBasket.splice(index, 1);
+                console.log(myBasket, "dnewodiweoidnwoendowein");
+            }
+        }
+
+        response.send("deleting");
+    });
+
     app.post('/api/cart/:id', (request, response) => {
         var id = request.params.id;
         const products = db.collection('products');
@@ -188,6 +205,8 @@ function createRoutes(app, db) {
             }
         }
 
+
+
         const context = {
             products: listCopy,
             total: price,
@@ -198,6 +217,17 @@ function createRoutes(app, db) {
 
 
         res.render('basket', context);
+
+    });
+
+    app.get('/checkout', function(req, res) {
+        const products = db.collection('products');
+        var query = {};
+
+
+        res.render('checkout');
+
+
 
     });
 
