@@ -28,6 +28,7 @@ function createRoutes(app, db) {
             }
         }
 
+
         response.send("deleting");
     });
 
@@ -188,29 +189,27 @@ function createRoutes(app, db) {
 
         var listCopy = myBasket.slice();
         var price = 0;
-        var cantidad = 0;
+        var cantidad = [];
+        var is = false;
         for (var i = 0; i < listCopy.length; i++) {
             price += listCopy[i].price;
 
         }
 
-        for (var i = 0; i < listCopy.length; i++) {
-
-            console.log(listCopy[i]._id.toString());
-            if (listCopy[i + 1] != null) {
-                if (listCopy[i]._id.toString() === listCopy[i + 1]._id.toString()) {
-                    cantidad += 1;
-                    console.log(cantidad);
-                }
-            }
-        }
+        //idenfica los elementos iguales
+        var count = {};
+        listCopy.forEach(function(i) {
+            i = i._id.toString();
+            count[i] = (count[i] || 0) + 1;
+        });
+        console.log(count);
 
 
 
         const context = {
             products: listCopy,
             total: price,
-            cant: cantidad,
+            cant: count,
 
 
         }

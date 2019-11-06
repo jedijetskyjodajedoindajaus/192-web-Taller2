@@ -8,8 +8,7 @@ window.addEventListener('load', function() {
             //event.preventDefault();
             var id = btn.getAttribute('data-name');
 
-            //sconsole.log(id, 'deleteando')
-
+            //mandar al routes la orfen y las variables
             fetch(`/api/basket/delete`, {
                 method: 'POST',
                 headers: {
