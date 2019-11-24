@@ -1,0 +1,41 @@
+    .checkout {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3%;
+    }
+    
+    .checkout__title {
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 18pt;
+        margin-left: 15%;
+    }
+    
+    .checkout__firstline {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        margin-left: 5%;
+    }
+    
+    .checkout__mt {
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 10pt;
+    }
+    
+    .checkout__box {
+        height: 70%;
+        width: 180%;
+        background-color: rgb(230, 230, 230);
+        border: none;
+        &:hover {
+            color: white;
+        }
+    }
+    
+    .checkout__lastname {
+        margin-left: 10%;
+    }

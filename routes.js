@@ -210,6 +210,7 @@ function createRoutes(app, db) {
             var obj = listCopy.find(elem => elem._id.toString() === key);
             obj.count = count[key];
             clean.push(obj);
+
         })
 
 

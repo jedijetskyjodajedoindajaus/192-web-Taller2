@@ -54,7 +54,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0.5em;
     margin-top: 10%;
     margin-left: auto;
     margin-right: 5%;
@@ -69,6 +68,18 @@
 
 .basket__total {
     margin-left: 10%;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.basket__number {
+    margin-right: 10%;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 16pt;
+    margin: 0%;
+    margin-right: 40%;
 }
 
 .basket__checkoubtn {

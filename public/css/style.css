@@ -1458,7 +1458,6 @@ input[type=range]:focus::-ms-fill-upper {
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  padding: 0.5em;
   margin-top: 10%;
   margin-left: auto;
   margin-right: 5%; }
@@ -1470,7 +1469,18 @@ input[type=range]:focus::-ms-fill-upper {
   margin-top: 5%; }
 
 .basket__total {
-  margin-left: 10%; }
+  margin-left: 10%;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 14pt; }
+
+.basket__number {
+  margin-right: 10%;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 16pt;
+  margin: 0%;
+  margin-right: 40%; }
 
 .basket__checkoubtn {
   background-color: gray;
@@ -1487,3 +1497,52 @@ input[type=range]:focus::-ms-fill-upper {
   .basket__products {
     width: 100%;
     margin-left: 0%; } }
+
+.checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 3%; }
+
+.checkout__title {
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 18pt;
+  margin-left: 15%; }
+
+.checkout__firstline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  margin-left: 5%; }
+
+.checkout__mt {
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 10pt; }
+
+.checkout__box {
+  height: 70%;
+  width: 180%;
+  background-color: #e6e6e6;
+  border: none; }
+  .checkout__box:hover {
+    color: white; }
+
+.checkout__lastname {
+  margin-left: 10%; }
