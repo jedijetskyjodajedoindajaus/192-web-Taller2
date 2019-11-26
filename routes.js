@@ -24,7 +24,7 @@ function createRoutes(app, db) {
                 console.log(myBasket, 'eudweudiweudiuwedwed');
                 myBasket.indexOf(index);
                 myBasket.splice(index, 1);
-                console.log(myBasket, "dnewodiweoidnwoendowein");
+                console.log(myBasket, "product");
             }
         }
 
@@ -83,7 +83,7 @@ function createRoutes(app, db) {
         products.find({})
             // transformamos el cursor a un arreglo
             .toArray((err, result) => {
-                // asegurarnos de que noh ay error
+                // asegurarnos de que no hay error
 
                 //
                 var c = 0;
@@ -98,6 +98,7 @@ function createRoutes(app, db) {
 
     });
 
+    //Filtros y orden
     app.get('/tienda', (request, response) => {
         const products = db.collection('products');
         console.log('Alguien entró a la tienda');
@@ -196,7 +197,7 @@ function createRoutes(app, db) {
 
         }
 
-        //idenfica los elementos iguales
+        //Encunentra cuales elementos son iguales
         var count = {};
         var clean = [];
 
