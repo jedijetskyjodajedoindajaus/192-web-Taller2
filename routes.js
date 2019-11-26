@@ -240,6 +240,15 @@ function createRoutes(app, db) {
 
     });
 
+    app.post('/checkout/orders', (request, response) => {
+
+        const orders = db.collection('orders');
+        console.log(request.body);
+        orders.insertOne(request.body);
+
+        response.send({ message: 'ok' });
+    });
+
 
 
 

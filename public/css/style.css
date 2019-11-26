@@ -1541,8 +1541,6 @@ input[type=range]:focus::-ms-fill-upper {
   width: 180%;
   background-color: #e6e6e6;
   border: none; }
-  .checkout__box:hover {
-    color: white; }
 
 .checkout__lastname {
   margin-left: 10%; }
