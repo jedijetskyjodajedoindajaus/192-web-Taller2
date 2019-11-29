@@ -10,10 +10,6 @@ function createRoutes(app, db) {
         response.sendFile(__dirname + '/public/index.html');
     });
 
-    // app.get('/tiendass', (request, response) => {
-    //     console.log('Alguien entró a la tienda');
-    //     response.render('store');
-    // });
     app.post('/api/basket/delete', (request, response) => {
         var id = request.body.id;
 
@@ -21,7 +17,7 @@ function createRoutes(app, db) {
             const element = myBasket[index];
 
             if (element.name === id) {
-                console.log(myBasket, 'eudweudiweudiuwedwed');
+                console.log(myBasket, 'myBaket');
                 myBasket.indexOf(index);
                 myBasket.splice(index, 1);
                 console.log(myBasket, "product");
@@ -141,6 +137,69 @@ function createRoutes(app, db) {
                     });
                 }
 
+                if (request.query.filter == 'Gammer') {
+                    listCopy = listCopy.filter(function(elem) {
+                        if (elem.personality == "gammer") {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+
+                if (request.query.filter == 'Funny') {
+                    listCopy = listCopy.filter(function(elem) {
+                        if (elem.personality == "funny") {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+
+                if (request.query.filter == 'Joker') {
+                    listCopy = listCopy.filter(function(elem) {
+                        if (elem.personality == "Joker") {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+
+                if (request.query.filter == 'human') {
+                    listCopy = listCopy.filter(function(elem) {
+                        if (elem.race == "Human") {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+
+                if (request.query.filter == 'young') {
+                    listCopy = listCopy.filter(function(elem) {
+                        if (elem.race == "Young") {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+
+                if (request.query.filter == 'robotic') {
+                    listCopy = listCopy.filter(function(elem) {
+                        if (elem.race == "Robotic") {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    });
+                }
+
+
+
+
 
                 if (request.query.order == 'cheap') {
                     listCopy.sort(function(a, b) {
@@ -192,6 +251,48 @@ function createRoutes(app, db) {
         var price = 0;
         var cantidad = [];
         var is = false;
+
+        for (var i = 0; i < listCopy.length; i++) {
+            price += listCopy[i].price;
+
+        }
+
+        //Encunentra cuales elementos son iguales
+        var count = {};
+        var clean = [];
+
+        listCopy.forEach(function(i) {
+            i = i._id.toString();
+            count[i] = (count[i] || 0) + 1;
+        });
+
+        //hace la iteración de los ids
+        Object.keys(count).forEach(key => {
+            var obj = listCopy.find(elem => elem._id.toString() === key);
+            obj.count = count[key];
+            clean.push(obj);
+
+        })
+        const context = {
+            products: clean,
+            total: price,
+            cant: count,
+        }
+
+
+        res.render('basket', context);
+
+    });
+
+    app.get('/checkout', function(req, res) {
+        const products = db.collection('products');
+        var query = {};
+        products.find({})
+
+        var listCopy = myBasket.slice();
+        var price = 0;
+        var cantidad = [];
+        var is = false;
         for (var i = 0; i < listCopy.length; i++) {
             price += listCopy[i].price;
 
@@ -225,16 +326,11 @@ function createRoutes(app, db) {
         }
 
 
-        res.render('basket', context);
-
-    });
-
-    app.get('/checkout', function(req, res) {
-        const products = db.collection('products');
-        var query = {};
 
 
-        res.render('checkout');
+
+        res.render('checkout', context);
+
 
 
 
@@ -246,6 +342,8 @@ function createRoutes(app, db) {
         request.body.myBasket = myBasket;
 
         orders.insertOne(request.body);
+
+
 
 
 

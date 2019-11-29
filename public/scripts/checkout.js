@@ -2,8 +2,6 @@ window.addEventListener('load', function() {
 
     var addChart__btn = document.querySelector('.checkout__send');
 
-
-
     addChart__btn.addEventListener('submit', function(event) {
         event.preventDefault();
         var order = new FormData(addChart__btn);

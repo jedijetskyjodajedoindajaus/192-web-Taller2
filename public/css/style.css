@@ -1502,17 +1502,34 @@ input[type=range]:focus::-ms-fill-upper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.checkout__leftside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-top: 3%; }
+  margin-top: 3%;
+  margin-left: 5%;
+  width: 50%; }
 
 .checkout__title {
   font-family: "Roboto Slab";
   font-weight: bold;
   font-size: 18pt;
-  margin-left: 15%; }
+  margin-left: 25%; }
+
+.checkout__total {
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 16pt;
+  margin-left: 5%; }
 
 .checkout__firstline {
   display: -webkit-box;
@@ -1542,5 +1559,184 @@ input[type=range]:focus::-ms-fill-upper {
   background-color: #e6e6e6;
   border: none; }
 
+.checkout__boxes {
+  height: 60%;
+  width: 80%;
+  background-color: #e6e6e6;
+  border: none; }
+
+.checkout__streetbox {
+  height: 50px;
+  width: 370%;
+  background-color: #e6e6e6;
+  border: none; }
+
 .checkout__lastname {
-  margin-left: 10%; }
+  margin-left: 20%; }
+
+.checkout__secondline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  margin-left: 5%;
+  margin-top: 3%; }
+
+.checkout__email {
+  margin-left: 20%; }
+
+.checkout__thirdline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.checkout__adress {
+  margin-left: 5%;
+  margin-top: 3%; }
+
+.checkout__forthline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  margin-left: 5%; }
+
+.checkout__date {
+  margin-right: 20%; }
+
+.checkout__btn {
+  background-color: gray;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 14pt;
+  padding: 1em;
+  width: 70%;
+  margin-top: 10%;
+  margin-left: 5%; }
+  .checkout__btn:hover {
+    color: white;
+    background-color: black; }
+
+.checkout__rightside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 0;
+  margin-top: 3.3%;
+  margin-right: 10%; }
+
+.checkout__products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 0;
+  height: 500px;
+  overflow: auto; }
+
+@media screen and (max-width: 700px) {
+  .checkout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .checkout__leftside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-left: 0;
+    width: 100%; }
+  .checkout__boxes {
+    height: 60%;
+    width: 80%;
+    background-color: #e6e6e6;
+    border: none; }
+  .checkout__streetbox {
+    height: 50px;
+    width: 252%;
+    background-color: #e6e6e6;
+    border: none; }
+  .checkout__box {
+    height: 70%;
+    width: 110%;
+    background-color: #e6e6e6;
+    border: none; }
+  .checkout__email {
+    margin-left: 15%;
+    margin-top: 5%; }
+  .checkout__lastname {
+    margin-left: 15%; }
+  .checkout__date {
+    margin-right: 10%;
+    margin-top: 5%;
+    height: 80px; }
+  .checkout__expiry {
+    height: 80px; }
+  .checkout__cv {
+    margin-top: 5%;
+    height: 80px; }
+  .checkout__telephone {
+    margin-top: 5%; }
+  .checkout__adress {
+    margin-top: 8%; }
+  .checkout__division {
+    display: none; }
+  .checkout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .checkout__title {
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 18pt;
+    margin-left: 10%; }
+  .checkout__total {
+    font-size: 14pt; } }

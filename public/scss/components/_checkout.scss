@@ -1,14 +1,28 @@
     .checkout {
         display: flex;
+        flex-direction: row;
+    }
+    
+    .checkout__leftside {
+        display: flex;
         flex-direction: column;
         margin-top: 3%;
+        margin-left: 5%;
+        width: 50%;
     }
     
     .checkout__title {
         font-family: "Roboto Slab";
         font-weight: bold;
         font-size: 18pt;
-        margin-left: 15%;
+        margin-left: 25%;
+    }
+    
+    .checkout__total {
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 16pt;
+        margin-left: 5%;
     }
     
     .checkout__firstline {
@@ -33,6 +47,163 @@
         border: none;
     }
     
+    .checkout__boxes {
+        height: 60%;
+        width: 80%;
+        background-color: rgb(230, 230, 230);
+        border: none;
+    }
+    
+    .checkout__streetbox {
+        height: 50px;
+        width: 370%;
+        background-color: rgb(230, 230, 230);
+        border: none;
+    }
+    
     .checkout__lastname {
-        margin-left: 10%;
+        margin-left: 20%;
+    }
+    
+    .checkout__secondline {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    
+    .checkout__email {
+        margin-left: 20%;
+    }
+    
+    .checkout__thirdline {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    
+    .checkout__adress {
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    
+    .checkout__forthline {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        margin-left: 5%;
+    }
+    
+    .checkout__date {
+        margin-right: 20%;
+    }
+    
+    .checkout__btn {
+        background-color: gray;
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        font-size: 14pt;
+        padding: 1em;
+        width: 70%;
+        margin-top: 10%;
+        margin-left: 5%;
+        &:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+    
+    .checkout__rightside {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 3.3%;
+        margin-right: 10%;
+    }
+    
+    .checkout__products {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        height: 500px;
+        overflow: auto;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .checkout {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout__leftside {
+            display: flex;
+            flex-direction: column;
+            margin-top: 3%;
+            margin-left: 0;
+            width: 100%;
+        }
+        .checkout__boxes {
+            height: 60%;
+            width: 80%;
+            background-color: rgb(230, 230, 230);
+            border: none;
+        }
+        .checkout__streetbox {
+            height: 50px;
+            width: 252%;
+            background-color: rgb(230, 230, 230);
+            border: none;
+        }
+        .checkout__box {
+            height: 70%;
+            width: 110%;
+            background-color: rgb(230, 230, 230);
+            border: none;
+        }
+        .checkout__email {
+            margin-left: 15%;
+            margin-top: 5%;
+        }
+        .checkout__lastname {
+            margin-left: 15%;
+        }
+        .checkout__date {
+            margin-right: 10%;
+            margin-top: 5%;
+            height: 80px;
+        }
+        .checkout__expiry {
+            height: 80px;
+        }
+        .checkout__cv {
+            margin-top: 5%;
+            height: 80px;
+        }
+        .checkout__telephone {
+            margin-top: 5%;
+        }
+        .checkout__adress {
+            margin-top: 8%;
+        }
+        .checkout__division {
+            display: none;
+        }
+        .checkout {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkout__title {
+            font-family: "Roboto Slab";
+            font-weight: bold;
+            font-size: 18pt;
+            margin-left: 10%;
+        }
+        .checkout__total {
+            font-size: 14pt;
+        }
     }

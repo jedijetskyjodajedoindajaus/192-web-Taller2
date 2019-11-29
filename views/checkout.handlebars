@@ -1,25 +1,86 @@
 <div class="checkout">
-    <p class="checkout__title">Shipping</p>
 
-    <form class="checkout__send">
-        <div class="checkout__firstline">
-            <div class="checkout__name">
-                <p class="checkout__mt">First name</p>
-                <input class="checkout__box" type="text" placeholder="ex: Jhon" name="firstname">
+    <div class="checkout__leftside">
+        <p class="checkout__title">Shipping and payment</p>
+        <form class="checkout__send">
+            <div class="checkout__firstline">
+                <div class="checkout__name">
+                    <p class="checkout__mt">First name</p>
+                    <input class="checkout__box" type="text" placeholder="ex: Jhon" name="firstname">
+                </div>
+                <div class="checkout__lastname">
+                    <p class="checkout__mt">Last name</p>
+                    <input class="checkout__box" type="text" placeholder="ex: Andrews" name="lastname">
+                </div>
             </div>
-            <div class="checkout__lastname">
-                <p class="checkout__mt">Last name</p>
-                <input class="checkout__box" type="text" placeholder="ex: Andrews" name="lastname">
+            <div class="checkout__secondline">
+                <div class="checkout__telephone">
+                    <p class="checkout__mt">Telephone</p>
+                    <input class="checkout__box" type="text" placeholder="ex: 3146781833" name="telephone">
+                </div>
+                <div class="checkout__email">
+                    <p class="checkout__mt"> Email</p>
+                    <input class="checkout__box" type="text" placeholder="ex: spotless@hotmail.com" name="email">
+                </div>
             </div>
-        <button type="submit" class="checkout__btn"> enviar</button>
-    </form>
+
+            <div class="checkout__thirdline">
+                <div class="checkout__adress">
+                    <p class="checkout__mt">Card Number</p>
+                    <input class="checkout__streetbox" type="text" placeholder="ex: xxxx xxxx xxxx xxxx" name="card">
+                </div>
+            </div>
+            <div class="checkout__forthline">
+                <div class="checkout__expiry">
+                    <p class="checkout__mt">Expiry Date (Month</p>
+                    <input class="checkout__boxes" type="text" placeholder="MM" name="Expiry date MM">
+                </div>
+                <div class="checkout__date">
+                    <p class="checkout__mt">/ Year)</p>
+                    <input class="checkout__boxes" type="text" placeholder="YY" name="Expiry date YY">
+                </div>
+                <div class="checkout__cv">
+                    <p class="checkout__mt"> CV Code</p>
+                    <input class="checkout__boxes" type="text" placeholder="CV" name="cv code">
+                </div>
+            </div>
+
+            <a href="/store"><button type="submit" class="checkout__btn"> CHECKOUT</button></a>
+        </form>
+    </div>
+
+    <img src="/images/verticalLine" alt="">
+
+    <section class="checkout__rightside">
+        <p class="checkout__total">Total cost {{total}} US</p>
+        <div class="checkout__products">
+        
+        
+       {{#each products}}
+
+    <div class="basket__buy">
+        <img class="basket__img" src={{images}} alt="">
+        <div class="basket__info">
+            <p class="basket__skill">{{skill}}</p>
+            <p class="basket__name">{{name}}</p>
+            <p class="basket__price">{{price}} US</p>
+        </div>
+        <div class="basket__trash">
+            <p class="basket__number">{{count}}</p>
+           
+        </div>
+    </div>
+       {{/each}}
+       
+        </div>
+    </section>
+ 
+
 
 
 
 </div>
 
 
-
-</div>
 
 <script src="/scripts/checkout.js"></script>

@@ -1,15 +1,6 @@
 
 <div class="containerg">
     <div class="containerg__lateral">
-        
-          {{!-- <div class="containerg__skills" action="/tienda" method="GET">
-             <a href= "" name="filter" class="containerg__sub" value="cook">Cook</a>
-             <a href= "" class="containerg__sub">Babysitter</a>
-             <a href= "" class="containerg__sub">Clean</a>
-             <button class="filters__enviar" type="submit">Ordenar</button>
-          
-           </div> --}}
-
     <div>
         <p class="containerg__title">Filter</p> 
           <a href= "" class="containerg__order">Alien's skills</a>
@@ -21,6 +12,28 @@
                </select>
                <button class="orderbtn__filter" type="submit">Filter</button>
             </form>
+
+          <a href= "" class="containerg__order">Alien's personality</a>
+            <form action="/tienda" method="GET">
+               <select name="filter">
+                  <option value="Gammer">Gammer</option>
+                  <option value="Funny">Funny</option>
+                  <option value="Joker">Joker</option>
+               </select>
+               <button class="orderbtn__filter" type="submit">Filter</button>
+            </form>
+
+         <a href= "" class="containerg__order">Alien's race</a>
+            <form action="/tienda" method="GET">
+               <select name="filter">
+                  <option value="human">Human</option>
+                  <option value="young">Young</option>
+                  <option value="robotic">Robotic</option>
+               </select>
+               <button class="orderbtn__filter" type="submit">Filter</button>
+            </form>
+         
+         
 
         <p class="containerg__title">Order</p>
           <a href= "" class="containerg__order">Price</a>
