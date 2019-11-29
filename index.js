@@ -14,7 +14,7 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // definir puerto
-const port = 3000;
+//const port = 3000;
 
 // importar mongo
 const MongoClient = require('mongodb').MongoClient;
@@ -33,6 +33,7 @@ const dbName = 'store';
 // Create a new MongoClient
 const client = new MongoClient(url);
 
+/*
 //conectarse al cliente
 client.connect(function(err) {
     assert.equal(null, err);
@@ -48,11 +49,33 @@ client.connect(function(err) {
     createRoutes(app, db);
 
 });
+*/
+
+
+MongoClient.connect(
+
+
+    "mongodb+srv://cluster0-fu8in.mongodb.net/spotless", {
+        auth: {
+            user: "Jedidias",
+            password: "guardianestelar"
+        }
+    },
+    function(err, client) {
+        const db = client.db(dbName);
+
+        const tipoDinosaurios = db.collection('products');
+        createRoutes(app, db);
+
+
+        app.listen(process.env.PORT || 1234);
+        //client.close();
+    });
 
 // definir una carpeta como pública
 app.use(express.static('public'));
 
-
+/*
 app.listen(port, () => {
     console.log(`Servidor iniciado en el puerto ${port}`);
-});
+});*/
