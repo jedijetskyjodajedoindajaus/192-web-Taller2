@@ -49,11 +49,12 @@
         </form>
     </div>
 
-    <img src="/images/verticalLine" alt="">
+    <img class="checkout__division" src="/images/verticalLine.png" alt="">
 
     <section class="checkout__rightside">
-        <p class="checkout__total">Total cost {{total}} US</p>
+        <p class="checkout__title">Total cost {{total}} US</p>
         <div class="checkout__products">
+        
         
         
        {{#each products}}
@@ -67,7 +68,8 @@
         </div>
         <div class="basket__trash">
             <p class="basket__number">{{count}}</p>
-           
+            
+
         </div>
     </div>
        {{/each}}

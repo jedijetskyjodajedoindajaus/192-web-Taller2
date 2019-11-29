@@ -135,6 +135,11 @@
         overflow: auto;
     }
     
+    .checkout__division {
+        margin-top: 10%;
+        height: 80%;
+    }
+    
     @media screen and (max-width: 700px) {
         .checkout {
             display: flex;
@@ -205,5 +210,8 @@
         }
         .checkout__total {
             font-size: 14pt;
+        }
+        .checkout__btn {
+            margin-left: 15%;
         }
     }

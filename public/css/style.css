@@ -1670,6 +1670,10 @@ input[type=range]:focus::-ms-fill-upper {
   height: 500px;
   overflow: auto; }
 
+.checkout__division {
+  margin-top: 10%;
+  height: 80%; }
+
 @media screen and (max-width: 700px) {
   .checkout {
     display: -webkit-box;
@@ -1739,4 +1743,6 @@ input[type=range]:focus::-ms-fill-upper {
     font-size: 18pt;
     margin-left: 10%; }
   .checkout__total {
-    font-size: 14pt; } }
+    font-size: 14pt; }
+  .checkout__btn {
+    margin-left: 15%; } }
